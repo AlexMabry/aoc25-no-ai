@@ -12,8 +12,15 @@
 
 ### Get AOC token from browser cache
 
+1) Open Chrome DevTools > Application > Cookies:
+2) Copy the value of the session cookie
+
+![session-cookie.png](session-cookie.png)
+
+3) Run the following commands:
+
     mkdir -p ~/.config/aocd
-    aocd-token > ~/.config/aocd/token
+    cat <session-cookie-value> > ~/.config/aocd/session
 
 ### Generate all files using the template
 
@@ -28,9 +35,4 @@
 ### Solve puzzle
 
     uv run solve [DAY]
-
-### Notes
-
-- This project now uses `uv` instead of Poetry. Use `uv add <pkg>` to add dependencies and `uv add --group dev <pkg>` for dev-only tools.
-- Running `uv sync` will create `uv.lock`. 
 
