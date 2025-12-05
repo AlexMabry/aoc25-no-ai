@@ -19,17 +19,16 @@
 
 3) Run the following commands:
 
-    ```bash
-    mkdir -p ~/.config/aocd
-    ```
-
     ### Linux/macOS
     ```bash
+    mkdir -p ~/.config/aocd
     echo "[session-cookie-value]" > ~/.config/aocd/token 
     ```
     
     ### Windows
+    Need to ensure that the file uses the correct encoding.
     ```PowerShell
+    mkdir "$HOME\.config\aocd" -Force
     "[session-cookie-value]" | Out-File -FilePath  ~\.config\aocd\token -Encoding ascii
     ```            
 
