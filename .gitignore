@@ -1,0 +1,5 @@
+.idea/
+.venv/
+
+# PYTHON
+__pycache__/

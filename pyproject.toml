@@ -1,0 +1,29 @@
+
+[project]
+name = "aoc25"
+version = "12.25.25"
+description = "Advent of Code"
+readme = "README.md"
+authors = [{ name = "Alex Mabry" }]
+requires-python = ">=3.13,<4.0"
+dependencies = [
+    "jinja2>=3.1.6",
+    "advent-of-code-data>=2.1.0",
+    "browser-cookie3>=0.20.1",
+    "sortedcontainers>=2.4.0",
+]
+
+[project.scripts]
+generate = "bootstrap:generate"
+test = "aoc25.main:test"
+solve = "aoc25.main:solve"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.8",
+]
+
+[build-system]
+requires = ["hatchling>=1.25.0"]
+build-backend = "hatchling.build"
+
