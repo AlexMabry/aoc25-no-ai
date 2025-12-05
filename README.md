@@ -19,13 +19,19 @@
 
 3) Run the following commands:
 
+    ```bash
     mkdir -p ~/.config/aocd
+    ```
 
-    # Linux/macOS
-    echo "<session-cookie-value>" > ~/.config/aocd/token  # Linux/macOS
+    ### Linux/macOS
+    ```bash
+    echo "[session-cookie-value]" > ~/.config/aocd/token 
+    ```
     
-    # Windows
-    "<session-cookie-value>" | Out-File -FilePath  ~\.config\aocd\token -Encoding ascii            
+    ### Windows
+    ```PowerShell
+    "[session-cookie-value]" | Out-File -FilePath  ~\.config\aocd\token -Encoding ascii
+    ```            
 
 ### Generate all files using the template
 
