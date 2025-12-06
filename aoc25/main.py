@@ -27,8 +27,11 @@ def solve_day(day, part=0):
 
     if not puzzle.answered_a:
         answer_a = day_module.solve_part1(puzzle.input_data)
-        print(f"  Part 1: {answer_a}")
-        puzzle.answer_a = answer_a
+        if answer_a is not None:
+            print(f"  Part 1: {answer_a}")
+            puzzle.answer_a = answer_a
+        else:
+            print(f"  Missing part 1 answer")
 
     elif part == 1:
         print(f"Part 1")
@@ -38,8 +41,11 @@ def solve_day(day, part=0):
     elif not puzzle.answered_b:
         answer_b = day_module.solve_part2(puzzle.input_data)
         print(f"  Part 1: {puzzle.answer_a}")
-        print(f"  Part 2: {answer_b}")
-        puzzle.answer_b = answer_b
+        if answer_b is not None:
+            print(f"  Part 2: {answer_b}")
+            puzzle.answer_b = answer_b
+        else:
+            print(f"  Missing part 2 answer")
 
     else:
         print("Already answered!")
