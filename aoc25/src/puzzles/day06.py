@@ -16,13 +16,11 @@ def solve_part2(data: str):
 
     answer = 0
     numbers = []
-    for column in zip_longest(*map(reversed, input_data), fillvalue=""):
-        value = "".join(column[:-1]).strip()
-        if value:
+    for column in zip_longest(*map(reversed, input_data)):
+        if value := "".join(column[:-1]).strip():
             numbers.append(value)
 
-        operator = column[-1].strip()
-        if operator:
+        if operator := column[-1].strip():
             answer += eval(f" {operator} ".join(numbers))
             numbers = []
 
